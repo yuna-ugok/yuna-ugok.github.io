@@ -2,11 +2,209 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <title>友菜のホームページ</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>yunaportfolio</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
-    <p>友菜のホームページ</p>
-    <p>nanananana</p>
+    <div class="content_1">
+      <header>
+        <div class="humburger-menu">
+          <input type="checkbox" id="menu-btn-check" />
+          <label for="menu-btn-check" class="menu-btn"><span></span></label>
+          <div class="menu-content">
+            <div class="menuname">
+            <ul>
+              <li>
+                <a href="#">TOP</a>
+              </li>
+              <li>
+                <a href="#profile">PROFILE</a>
+              </li>
+              <li>
+                <a href="#works">WORKS</a>
+              </li>
+            </ul>
+            </div>
+            <div class="SNS">
+              <a href="https://twitter.com/yuna_ugok"><img src="./img/Twitter.png" id="twitter"></a>
+              <a href="#"><img src="./img/Instagram.png"></a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="kuhaku"></div>
+      <section>
+        <div class="fadeIn">
+          <img src="./img/portfolio-rogo.png" />
+        </div>
+      </section>
+
+      <section class="profile" id="profile">
+        <div class="height">
+          <div class="profileimg">
+            <div class="rotateprofileoya">
+              <img
+                src="./img/PROFILE.png"
+                class="rotateprofile animation"
+              />
+            </div>
+            <!-- <img src="./img/yuna.jpg" class="yunaimg" /> -->
+              <ul class="slider">
+              <li class="slider-item slider-item01"></li>
+              <li class="slider-item slider-item02"></li>
+              <li class="slider-item slider-item03"></li>
+              </ul>
+          </div>
+          <div class="profiledetail">
+            <p id="namaeja">中山 友菜</p>
+            <p id="namaeen">nakayama yuna</p>
+            <p id="daigaku">武庫川女子大学 生活環境学部 情報メディア学科  3年</p>
+            <p>
+              WEBサイトやノーコードツールを使ったアプリ開発などをしてします。</br>
+              技術はまだ足りないですが、良い作品を作れるように日々勉強しています。</br>
+              またTwitterにおいて発信も行っています。ぜひご覧ください。
+            </p>
+            <div class="SNS">
+              <a href="https://twitter.com/yuna_ugok"><img src="./img/Twitter.png" id="twitter"></a>
+              <a href="#"><img src="./img/Instagram.png"></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="myskill">
+        <h1>myskill</h1>
+        <div class="skillcenter">
+          <div class="skill">
+            <div class="skillrogoimg">
+              <img src="./img/web.png">
+            </div>
+            <div class="skilldetail">
+              <h2>web</h2>
+             <p>★★★</p>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skillrogoimg">
+              <img src="./img/bubble.png">
+            </div>
+            <div class="skilldetail">
+              <h2>.bubble</h2>
+              <p>★☆☆</p>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skillrogoimg">
+              <img src="./img/Illustrator.jpg">
+            </div> 
+            <div class="skilldetail">
+              <h2>Illustrator</h2>
+              <p>★★☆</p>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skillrogoimg">
+              <img src="./img/Photoshop.jpg">
+            </div>
+            <div class="skilldetail">
+              <h2>Photoshop</h2>
+              <p>★☆☆</p>
+            </div>
+          </div>
+        </div>
+        <p id="myskillbun">特にWeb制作に力を入れています。</p>
+     </section>
+    </div>
+    <div class="content_2">
+     <section class="works" id="works">
+       <div class="rotateworksoya">
+        <img
+        src="./img/WORKS.png"
+        class="rotateprofile animation"
+        />
+       </div>   
+       <img src="./img/workpoint.png" class="worksmain">
+       <img src="./img/flower.png" class="worksflower">          
+      </section>
+    </div>
+    <section class="myworks">
+      <h1>myworks</h1>
+      <div class="myworkscontent">
+        <div class="zoomIn">
+          <a href="works.html" class="onework">
+            <img src="./img/Fridge.jpg" class="workimg ">
+            <div class="imgmoji">
+              <h3 class="midasi">　APPS　</h3>
+              <p class="midasibun">冷蔵庫管理アプリ</p>
+            </div>
+            <h4>Made in March 2021</h4>
+          </a>
+        </div>
+        <div class="zoomIn">
+          <a href="works.html" class="onework">
+            <img src="./img/cafecity.jpg" class="workimg ">
+            <div class="imgmoji">
+              <h3 class="midasi">　WEB　</h3>
+              <p class="midasibun">CAFEサイト</p>
+            </div>
+            <h4>Made in Febuary 2021</h4>
+          </a>
+        </div>
+        <div class="zoomIn">
+          <a href="works.html" class="onework">
+            <img src="./img/anime.jpg" class="workimg ">
+            <div class="imgmoji">
+              <h3 class="midasi">　CG　</h3>
+              <p class="midasibun">クリスマスアニメーション</p>
+            </div>
+            <h4>Made in September 2020</h4>
+          </a>
+        </div>
+        <div class="zoomIn">
+          <a href="works.html" class="onework">
+            <img src="./img/aquarium.jpg" class="workimg ">
+            <div class="imgmoji">
+              <h3 class="midasi">　WEB　</h3>
+              <p class="midasibun">水族館サイト</p>
+            </div>
+            <h4>Made in August 2020</h4>
+          </a>
+        </div>
+        <div class="zoomIn">
+          <a href="works.htmll" class="onework">
+            <img src="./img/portfolio1.jpg" class="workimg ">
+            <div class="imgmoji">
+              <h3 class="midasi">　WEB　</h3>
+              <p class="midasibun">初代ポートフォリオサイト</p>
+            </div>
+            <h4>Made in July 2020</h4>
+          </a>
+        </div>
+        <div class="zoomIn">
+          <a href="works.html" class="onework">
+            <img src="./img/cafeforest.jpg" class="workimg ">
+            <div class="imgmoji">
+              <h3 class="midasi">　WEB　</h3>
+              <p class="midasibun">CAFEサイト</p>
+            </div>
+            <h4>Made in July 2020</h4>
+          </a>
+        </div>    
+      </div>
+      <div class="Viewmore">
+        <a href="works.html" class="btn">View More</a>
+      </div>
+    </section>
+    <footer>
+      <p>@2021 yunaportfolio</p>
+    </footer>
+    
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!--自作のJS-->
+    <script src="script.js"></script>
   </body>
 </html>
+
