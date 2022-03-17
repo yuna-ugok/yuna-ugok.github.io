@@ -1,0 +1,1132 @@
+@media screen and (min-width: 901px) {
+  body {
+    color: dimgray;
+    margin: 0;
+    /* background-color: #5f7da5; */
+    background-image: url(./img/haikei.png);
+  }
+
+  .content_2 {
+    position: relative;
+    z-index: -1;
+  }
+  .content_2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* 四角形を傾ける */
+    transform: skewY(10deg);
+    transform-origin: bottom left;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    background: white;
+  }
+
+  header {
+    z-index: 2;
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    /* background-color: rgba(0, 255, 255, 0.3); */
+    /* border-top: solid 10px rgba(0, 255, 255, 0.3); */
+  }
+
+  .menu-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    height: 60px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    z-index: 90;
+    background-color: #ddb0cc;
+    border: solid 1px black;
+    border-radius: 100%;
+  }
+
+  .menu-btn span,
+  .menu-btn span::before,
+  .menu-btn span::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background-color: black;
+    position: absolute;
+  }
+
+  .menu-btn span::before {
+    bottom: 8px;
+  }
+
+  .menu-btn span::after {
+    top: 8px;
+  }
+
+  #menu-btn-check:checked ~ .menu-btn span {
+    background-color: rgba(255, 255, 255, 0);
+  }
+
+  #menu-btn-check:checked ~ .menu-btn span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+  }
+
+  #menu-btn-check:checked ~ .menu-btn span::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+
+  #menu-btn-check {
+    display: none;
+  }
+  .menu-content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    z-index: 80;
+    background-color: rgb(255, 233, 251);
+    transition: all 0.5s;
+  }
+
+  .menuname {
+    margin-top: 200px;
+  }
+
+  .menu-content ul li {
+    list-style: none;
+  }
+
+  .menu-content ul li a {
+    display: block;
+    width: 30%;
+    text-align: center;
+    border-bottom: solid 1px dimgray;
+    font-size: 32px;
+    box-sizing: border-box;
+    color: dimgray;
+    text-decoration: none;
+    padding: 9px 15px 10px 0;
+    margin-bottom: 30px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .menu-content ul li a:hover {
+    color: rgb(153, 153, 153);
+  }
+
+  /* .menu-content ul {
+  padding: 70px 10px 0;
+}
+
+.menu-content ul li {
+  border-bottom: solid 1px #ffffff;
+  list-style: none;
+}
+
+.menu-content ul li a {
+  display: block;
+  width: 100%;
+  font-size: 15px;
+  box-sizing: border-box;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 9px 15px 10px 0;
+  position: relative;
+}
+
+.menu-content ul li a::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-top: solid 2px #ffffff;
+  border-right: solid 2px #ffffff;
+  transform: rotate(45deg);
+  position: absolute;
+  right: 11px;
+  top: 16px;
+} */
+
+  #menu-btn-check:checked ~ .menu-content {
+    left: 0%;
+  }
+
+  .kuhaku {
+    width: 100%;
+    height: 200px;
+  }
+
+  img {
+    width: 40%;
+    z-index: 0;
+  }
+  .fadeIn img {
+    margin-top: -50px;
+    width: 60%;
+    margin-bottom: -30px;
+    margin-left: -100px;
+  }
+  /* その場で */
+  .fadeIn {
+    animation-name: fadeInAnime;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+  }
+
+  @keyframes fadeInAnime {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* 回るアニメ */
+  .animation {
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 1.5s;
+    height: fit-content;
+  }
+
+  .rotateprofile {
+    animation-name: anim-r;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-direction: normal;
+    margin-left: 10px;
+  }
+
+  @keyframes anim-r {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .rotateprofileoya {
+    width: 80%;
+  }
+
+  /* .yunaimg {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: -10%;
+} */
+
+  /*==================================================
+スライダーのためのcss
+===================================*/
+  .slider {
+    margin-right: 5%;
+    position: relative;
+    z-index: 1;
+    /*↑z-indexの値をh1のz-indexの値よりも小さくして背景に回す*/
+    /* height: 100vh; */
+    /*スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+  }
+  /*　背景画像設定　*/
+
+  .slider-item01 {
+    background: url(./img/yuna.jpg);
+  }
+
+  .slider-item02 {
+    background: url(./img/cake.jpg);
+  }
+
+  .slider-item03 {
+    background: url(./img/castle.jpg);
+  }
+
+  .slider-item {
+    width: 100%; /*各スライダー全体の横幅を画面の高さいっぱい（100%）にする*/
+    height: 50vh;
+    /*各スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+    background-repeat: no-repeat; /*背景画像をリピートしない*/
+    background-position: center; /*背景画像の位置を中央に*/
+    background-size: cover; /*背景画像が.slider-item全体を覆い表示*/
+  }
+
+  /*ドットナビゲーションの設定*/
+
+  .slick-dots {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    margin: -50px 0 0 0; /*ドットの位置*/
+  }
+
+  .slick-dots li {
+    display: inline-block;
+    margin: 0 5px;
+  }
+
+  .slick-dots button {
+    color: transparent;
+    outline: none;
+    width: 8px; /*ドットボタンのサイズ*/
+    height: 16px; /*ドットボタンのサイズ*/
+    display: block;
+    border-radius: 50%;
+    background: rgb(255, 255, 255); /*ドットボタンの色*/
+  }
+
+  .slick-dots .slick-active button {
+    background: rgb(0, 0, 0); /*ドットボタンの現在地表示の色*/
+  }
+
+  .profileimg {
+    width: 50%;
+    float: left;
+    margin-left: 5%;
+  }
+
+  .profiledetail {
+    float: left;
+    width: 40%;
+  }
+  .height {
+    display: flex;
+    align-items: center;
+  }
+
+  #namaeja {
+    font-size: 32px;
+  }
+
+  #namaeen {
+    margin-top: -20px;
+    border-bottom: solid 1px dimgray;
+    margin-bottom: 30px;
+  }
+
+  #daigaku {
+    font-size: 18px;
+  }
+
+  .SNS {
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+    margin-bottom: 10px;
+  }
+
+  .SNS img {
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 80px;
+  }
+
+  #twitter {
+    padding-right: 20px;
+  }
+
+  .myskill {
+    margin-top: 100px;
+    clear: both;
+    font-family: "Times New Roman", Times, serif;
+  }
+
+  .skillcenter {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h1 {
+    font-size: 32px;
+    text-align: center;
+    border-bottom: solid 1px dimgray;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-bottom: 50px;
+  }
+
+  .skill img {
+    width: 100px;
+    height: 100px;
+    border-radius: 5%;
+  }
+
+  .skillrogoimg {
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .skill {
+    width: 200px;
+    float: left;
+  }
+
+  .skill h2 {
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+  }
+
+  .skill p {
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    font-size: 20px;
+    margin-top: -20px;
+    margin-bottom: 50px;
+  }
+  #myskillbun {
+    clear: both;
+    text-align: center;
+  }
+  .works {
+    margin-top: 30px;
+  }
+
+  .rotateworksoya {
+    width: 40%;
+    padding-top: 100px;
+    margin-left: 5%;
+    float: left;
+  }
+
+  .worksmain {
+    margin-top: 20%;
+    margin-left: -20%;
+  }
+
+  .worksflower {
+    width: 30%;
+  }
+
+  .myworks {
+    font-family: "Times New Roman", Times, serif;
+    clear: both;
+    margin-top: 200px;
+  }
+
+  .myworkscontent {
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
+
+  .onework {
+    width: 40%;
+    height: fit-content;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 100px;
+    float: left;
+    color: rgb(94, 94, 94);
+    background-color: rgba(255, 255, 255, 0.774);
+    box-shadow: 0 0 8px grey;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .onework:hover {
+    color: rgb(245, 245, 245);
+    background-color: rgba(197, 196, 196, 0.7);
+  }
+
+  /* 画像が大きくなる　問題点：メニューをと重なった時に画像が上に来る */
+  .zoomIn img {
+    z-index: -10;
+    transform: scale(1);
+    transition: 0.3s ease-in-out; /*移り変わる速さを変更したい場合はこの数値を変更*/
+  }
+
+  .zoomIn a:hover img {
+    z-index: -3;
+    transform: scale(1.02); /*拡大の値を変更したい場合はこの数値を変更*/
+  }
+
+  .workimg {
+    width: 90%;
+    height: fit-content;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+  }
+  .midasi {
+    background-color: rgb(184, 159, 182);
+    width: fit-content;
+    padding: 5px;
+    border-radius: 50px;
+    margin-right: 10px;
+    float: left;
+    margin-right: 30px;
+  }
+
+  .midasimoji {
+    float: left;
+  }
+  .imgmoji {
+    margin-top: -10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h4 {
+    margin-top: -2%;
+    text-align: center;
+  }
+
+  .Viewmore {
+    clear: both;
+    margin-bottom: 100px;
+  }
+
+  .Viewmore a {
+    background: rgb(255, 255, 255);
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 240px;
+    padding: 10px 25px;
+    color: dimgray;
+    transition: 0.3s ease-in-out;
+    font-weight: 500;
+  }
+  .Viewmore a:before {
+    content: "";
+    position: absolute;
+    top: calc(50% - 2px);
+    right: -2em;
+    transform: translateY(calc(-50% - 2px)) rotate(30deg);
+    width: 12px;
+    height: 2px;
+    background-color: #815985;
+    transition: 0.3s;
+  }
+  .Viewmore a:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -2em;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 2px;
+    background-color: #815985;
+    transition: 0.3s;
+  }
+  .Viewmore a:hover:before,
+  .Viewmore a:hover:after {
+    right: -2.5em;
+  }
+  .Viewmore a:hover {
+    background: #fcedff;
+    color: #815985;
+  }
+
+  footer {
+    background-color: rgba(255, 255, 255, 0.63);
+    border-bottom: solid 2px rgba(255, 255, 255, 0.63);
+    color: dimgray;
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    height: 70px;
+  }
+
+  footer p {
+    padding-top: 30px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    color: dimgray;
+    margin: 0;
+    /* background-color: #5f7da5; */
+    background-image: url(./img/haikei.png);
+    width: 100%;
+  }
+
+  .content_2 {
+    position: relative;
+    z-index: -1;
+  }
+  .content_2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* 四角形を傾ける */
+    transform: skewY(10deg);
+    transform-origin: bottom left;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    background: white;
+  }
+
+  header {
+    z-index: 2;
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    /* background-color: rgba(0, 255, 255, 0.3); */
+    /* border-top: solid 10px rgba(0, 255, 255, 0.3); */
+  }
+
+  .menu-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    height: 60px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    z-index: 90;
+    background-color: #ddb0cc;
+    border: solid 1px black;
+    border-radius: 100%;
+  }
+
+  .menu-btn span,
+  .menu-btn span::before,
+  .menu-btn span::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background-color: black;
+    position: absolute;
+  }
+
+  .menu-btn span::before {
+    bottom: 8px;
+  }
+
+  .menu-btn span::after {
+    top: 8px;
+  }
+
+  #menu-btn-check:checked ~ .menu-btn span {
+    background-color: rgba(255, 255, 255, 0);
+  }
+
+  #menu-btn-check:checked ~ .menu-btn span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+  }
+
+  #menu-btn-check:checked ~ .menu-btn span::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+
+  #menu-btn-check {
+    display: none;
+  }
+  .menu-content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    z-index: 80;
+    background-color: rgb(255, 233, 251);
+    transition: all 0.5s;
+  }
+
+  .menuname {
+    margin-top: 200px;
+  }
+
+  .menu-content ul li {
+    list-style: none;
+  }
+
+  .menu-content ul li a {
+    display: block;
+    width: 35%;
+    text-align: center;
+    border-bottom: solid 1px dimgray;
+    font-size: 32px;
+    box-sizing: border-box;
+    color: dimgray;
+    text-decoration: none;
+    padding: 9px 15px 10px 0;
+    margin-bottom: 30px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .menu-content ul li a:hover {
+    color: rgb(153, 153, 153);
+  }
+
+  /* .menu-content ul {
+    padding: 70px 10px 0;
+  }
+
+  .menu-content ul li {
+    border-bottom: solid 1px #ffffff;
+    list-style: none;
+  }
+
+  .menu-content ul li a {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    box-sizing: border-box;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 9px 15px 10px 0;
+    position: relative;
+  }
+
+  .menu-content ul li a::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-top: solid 2px #ffffff;
+    border-right: solid 2px #ffffff;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 11px;
+    top: 16px;
+  } */
+
+  #menu-btn-check:checked ~ .menu-content {
+    left: 0%;
+  }
+
+  .kuhaku {
+    width: 100%;
+    height: 200px;
+  }
+
+  img {
+    width: 40%;
+    z-index: 0;
+  }
+
+  .fadeIn img {
+    margin-top: -50px;
+    width: 80%;
+    margin-bottom: -200px;
+  }
+
+  /* その場で */
+  .fadeIn {
+    animation-name: fadeInAnime;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 300px;
+  }
+
+  @keyframes fadeInAnime {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* 回るアニメ */
+  .animation {
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 1.5s;
+    height: fit-content;
+  }
+
+  .rotateprofile {
+    animation-name: anim-r;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-direction: normal;
+    margin-left: 10px;
+  }
+
+  @keyframes anim-r {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .rotateprofileoya {
+    width: 80%;
+  }
+
+  /* .yunaimg {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: -10%;
+} */
+
+  /*==================================================
+スライダーのためのcss
+===================================*/
+  .slider {
+    margin-right: 5%;
+    position: relative;
+    z-index: 1;
+    /*↑z-indexの値をh1のz-indexの値よりも小さくして背景に回す*/
+    /* height: 100vh; */
+    /*スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+  }
+  /*　背景画像設定　*/
+
+  .slider-item01 {
+    background: url(./img/yuna.jpg);
+  }
+
+  .slider-item02 {
+    background: url(./img/cake.jpg);
+  }
+
+  .slider-item03 {
+    background: url(./img/castle.jpg);
+  }
+
+  .slider-item {
+    width: 100%; /*各スライダー全体の横幅を画面の高さいっぱい（100%）にする*/
+    height: 40vh;
+    /*各スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+    background-repeat: no-repeat; /*背景画像をリピートしない*/
+    background-position: center; /*背景画像の位置を中央に*/
+    background-size: cover; /*背景画像が.slider-item全体を覆い表示*/
+  }
+
+  /*ドットナビゲーションの設定*/
+
+  .slick-dots {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    margin: -50px 0 0 0; /*ドットの位置*/
+  }
+
+  .slick-dots li {
+    display: inline-block;
+    margin: 0 5px;
+  }
+
+  .slick-dots button {
+    color: transparent;
+    outline: none;
+    width: 8px; /*ドットボタンのサイズ*/
+    height: 16px; /*ドットボタンのサイズ*/
+    display: block;
+    border-radius: 50%;
+    background: rgb(255, 255, 255); /*ドットボタンの色*/
+  }
+
+  .slick-dots .slick-active button {
+    background: rgb(0, 0, 0); /*ドットボタンの現在地表示の色*/
+  }
+
+  .profileimg {
+    width: 95%;
+    float: left;
+    margin-left: 2.5%;
+  }
+
+  .profiledetail {
+    clear: both;
+    width: 90%;
+    padding-top: 50px;
+    margin: 0 auto;
+  }
+
+  #namaeja {
+    font-size: 28px;
+  }
+
+  #namaeen {
+    margin-top: -20px;
+    border-bottom: solid 1px dimgray;
+    margin-bottom: 30px;
+  }
+
+  #daigaku {
+    font-size: 16px;
+  }
+
+  .SNS {
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+    margin-bottom: 10px;
+  }
+
+  .SNS img {
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 60px;
+  }
+
+  #twitter {
+    padding-right: 20px;
+  }
+
+  .myskill {
+    margin-top: 100px;
+    clear: both;
+    font-family: "Times New Roman", Times, serif;
+  }
+
+  .skillcenter {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h1 {
+    font-size: 32px;
+    text-align: center;
+    border-bottom: solid 1px dimgray;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-bottom: 50px;
+  }
+
+  .skill img {
+    width: 100px;
+    height: 100px;
+    border-radius: 5%;
+  }
+
+  .skillrogoimg {
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    float: left;
+  }
+
+  .skilldetail {
+    margin-left: 30px;
+    width: max-content;
+    float: left;
+    margin-bottom: 50px;
+  }
+
+  .skill {
+    width: fit-content;
+    display: block;
+  }
+
+  .skill h2 {
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+  }
+
+  .skill p {
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    font-size: 20px;
+    margin-top: -20px;
+    margin-bottom: 50px;
+  }
+  #myskillbun {
+    clear: both;
+    text-align: center;
+  }
+  .works {
+    margin-top: 30px;
+  }
+
+  .rotateworksoya {
+    width: 75%;
+    padding-top: 100px;
+    margin-left: 5%;
+    float: left;
+  }
+
+  .worksmain {
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 5%;
+  }
+
+  .worksflower {
+    width: 30%;
+    margin-left: 70%;
+    margin-bottom: 0%;
+  }
+
+  .myworks {
+    font-family: "Times New Roman", Times, serif;
+    clear: both;
+    margin-top: 200px;
+  }
+
+  .myworkscontent {
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
+
+  .onework {
+    width: 90%;
+    height: fit-content;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 50px;
+    display: block;
+    color: rgb(94, 94, 94);
+    background-color: rgba(255, 255, 255, 0.774);
+    box-shadow: 0 0 8px grey;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .onework:hover {
+    color: rgb(245, 245, 245);
+    background-color: rgba(197, 196, 196, 0.7);
+  }
+
+  /* 画像が大きくなる　問題点：メニューをと重なった時に画像が上に来る */
+  .zoomIn img {
+    z-index: -10;
+    transform: scale(1);
+    transition: 0.3s ease-in-out; /*移り変わる速さを変更したい場合はこの数値を変更*/
+  }
+
+  .zoomIn a:hover img {
+    z-index: -3;
+    transform: scale(1.02); /*拡大の値を変更したい場合はこの数値を変更*/
+  }
+
+  .workimg {
+    width: 90%;
+    height: fit-content;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+  }
+  .midasi {
+    background-color: rgb(184, 159, 182);
+    width: fit-content;
+    padding: 5px;
+    border-radius: 50px;
+    margin-right: 10px;
+    float: left;
+    margin-right: 30px;
+  }
+
+  .midasimoji {
+    float: left;
+  }
+  .imgmoji {
+    margin-top: -10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h4 {
+    margin-top: -2%;
+    text-align: center;
+  }
+
+  .Viewmore {
+    clear: both;
+    margin-bottom: 100px;
+  }
+
+  .Viewmore a {
+    background: rgb(255, 255, 255);
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 240px;
+    padding: 10px 25px;
+    color: dimgray;
+    transition: 0.3s ease-in-out;
+    font-weight: 500;
+  }
+  .Viewmore a:before {
+    content: "";
+    position: absolute;
+    top: calc(50% - 2px);
+    right: -2em;
+    transform: translateY(calc(-50% - 2px)) rotate(30deg);
+    width: 12px;
+    height: 2px;
+    background-color: #815985;
+    transition: 0.3s;
+  }
+  .Viewmore a:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -2em;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 2px;
+    background-color: #815985;
+    transition: 0.3s;
+  }
+  .Viewmore a:hover:before,
+  .Viewmore a:hover:after {
+    right: -2.5em;
+  }
+  .Viewmore a:hover {
+    background: #fcedff;
+    color: #815985;
+  }
+
+  footer {
+    background-color: rgba(255, 255, 255, 0.63);
+    border-bottom: solid 2px rgba(255, 255, 255, 0.63);
+    color: dimgray;
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    height: 70px;
+  }
+
+  footer p {
+    padding-top: 30px;
+  }
+}
