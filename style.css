@@ -789,6 +789,7 @@
 
   .rotateprofileoya {
     width: 80%;
+    height: 80%;
   }
 
   /* .yunaimg {
@@ -1038,6 +1039,7 @@
 
   .workimg {
     width: 90%;
+    height: 100%;
     height: fit-content;
     margin-left: 5%;
     margin-right: 5%;
@@ -1051,6 +1053,10 @@
     margin-right: 10px;
     float: left;
     margin-right: 30px;
+  }
+  
+  .midasibun {
+    font-size: 12px;
   }
 
   .midasimoji {
