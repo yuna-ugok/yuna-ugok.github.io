@@ -248,7 +248,7 @@
   /*　背景画像設定　*/
 
   .slider-item01 {
-    background: url(./img/yuna.jpg);
+    background: url(./img/workpoint.png);
   }
 
   .slider-item02 {
@@ -733,10 +733,10 @@
   }
 
   .fadeIn img {
-   margin-top: 80px;
+   margin-top: 50px;
     margin-left: -30px;
     width: 80%;
-    margin-bottom: 160px;
+    margin-bottom: 100px;
   }
 
   /* その場で */
@@ -818,7 +818,7 @@
   /*　背景画像設定　*/
 
   .slider-item01 {
-    background: url(./img/yuna.jpg);
+    background: url(./img/workpoint.png);
   }
 
   .slider-item02 {
