@@ -788,8 +788,8 @@
   }
 
   .rotateprofileoya {
-    width: 80%;
-    height: 80%;
+    width: 400px;
+    height: 200px;
   }
 
   /* .yunaimg {
@@ -973,7 +973,8 @@
   }
 
   .rotateworksoya {
-    width: 75%;
+     width: 400px;
+    height: 200px;
     padding-top: 100px;
     margin-left: 5%;
     float: left;
@@ -1040,7 +1041,6 @@
   .workimg {
     width: 90%;
     height: 100%;
-    height: fit-content;
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 5%;
