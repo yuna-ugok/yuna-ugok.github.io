@@ -675,7 +675,7 @@
     box-sizing: border-box;
     color: dimgray;
     text-decoration: none;
-    padding: 9px 15px 10px 0;
+    left: -10px;
     margin-bottom: 30px;
     position: relative;
     margin-left: auto;
@@ -733,9 +733,10 @@
   }
 
   .fadeIn img {
-    margin-top: -50px;
+   margin-top: 80px;
+    margin-left: -30px;
     width: 80%;
-    margin-bottom: -200px;
+    margin-bottom: 160px;
   }
 
   /* その場で */
