@@ -172,7 +172,7 @@
   .fadeIn img {
     margin-top: -50px;
     width: 60%;
-    margin-bottom: -30px;
+    margin-bottom: -0px;
     margin-left: -100px;
   }
   /* その場で */
@@ -248,7 +248,7 @@
   /*　背景画像設定　*/
 
   .slider-item01 {
-    background: url(./img/workpoint.png);
+    background: url(./img/yunaimage.jpg);
   }
 
   .slider-item02 {
@@ -484,6 +484,7 @@
   .midasimoji {
     float: left;
   }
+
   .imgmoji {
     margin-top: -10px;
     display: flex;
@@ -734,11 +735,11 @@
   }
 
   .fadeIn img {
-    margin-top: 50px;
+    margin-top: 80px;
     margin-left: -30px;
     width: 80%;
-    height: 20%;
-    margin-bottom: 100px;
+    height: 80%;
+    margin-bottom: 160px;
   }
 
   /* その場で */
@@ -791,10 +792,12 @@
   }
 
   .rotateprofileoya {
+    /* width: 80%;
+    height: 80%; */
     width: 400px;
     height: 200px;
   }
-  
+
   .rotateprofile {
     width: 200px;
     height: 200px;
@@ -820,7 +823,7 @@
   /*　背景画像設定　*/
 
   .slider-item01 {
-    background: url(./img/workpoint.png);
+    background: url(./img/yunaimage.jpg);
   }
 
   .slider-item02 {
@@ -981,7 +984,7 @@
   }
 
   .rotateworksoya {
-     width: 400px;
+    width: 400px;
     height: 200px;
     padding-top: 100px;
     margin-left: 5%;
@@ -1048,7 +1051,7 @@
 
   .workimg {
     width: 90%;
-    height: 100%;
+
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 5%;
@@ -1062,11 +1065,9 @@
     float: left;
     margin-right: 30px;
   }
-  
   .midasibun {
     font-size: 12px;
   }
-
   .midasimoji {
     float: left;
   }
