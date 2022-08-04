@@ -489,8 +489,8 @@
 
   .kiimg {
     padding-top: 50px;
-    width: 79%;
-    margin: 0 10%;
+    width: 90%;
+    margin: 0 5%;
     padding-bottom: 20px;
   }
 
@@ -522,7 +522,7 @@
   }
 
   .myworks {
-    width: 80%;
+    width: 90%;
     margin: 0 auto 150px;
   }
 
@@ -540,11 +540,11 @@
   .midasi {
     background-color: white;
     font-size: 20px;
-    width: 80vw;
+    width: 90vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 10vw 30px;
+    margin: 0 5vw 30px;
     box-shadow: 0 0 8px grey;
   }
 
@@ -559,14 +559,14 @@
   }
 
   .worksimg {
-    width: 80vw;
-    margin: 0 10vw;
+    width: 90vw;
+    margin: 0 5vw;
     box-shadow: 0 0 8px grey;
   }
 
   .setumei {
-    width: 80%;
-    margin: 0 10vw;
+    width: 90%;
+    margin: 0 5vw;
   }
   .setumei p:nth-of-type(1) {
     font-size: 20px;
