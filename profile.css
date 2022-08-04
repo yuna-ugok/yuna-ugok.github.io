@@ -597,16 +597,17 @@
   }
 
   .profiledetail {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
   }
+
   .height {
     display: flex;
     align-items: center;
   }
 
   #namaeja {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   #namaeen {
@@ -616,7 +617,7 @@
   }
 
   #daigaku {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .SNS {
@@ -627,8 +628,8 @@
   }
 
   .SNS img {
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
     width: 80px;
   }
 
@@ -650,11 +651,11 @@
   }
 
   h1 {
-    font-size: 32px;
+    font-size: 20px;
     text-align: center;
     border-bottom: solid 1px dimgray;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
     margin-bottom: 50px;
     margin-top: 150px;
     font-family: "Times New Roman", Times, serif;
@@ -689,6 +690,10 @@
     float: left;
     margin-bottom: 50px;
   }
+  /* 
+  .skilldetail p {
+    font-size: 14px;
+  } */
 
   .skill {
     width: fit-content;
@@ -715,15 +720,17 @@
   }
 
   .researchsetumei {
-    width: 75%;
+    width: 90%;
     margin: 0 auto;
     margin-bottom: 70px;
+    /* font-size: 14px; */
   }
 
   .researchsetumei-seikaku {
-    width: 75%;
+    width: 90%;
     margin: 0 auto;
     margin-bottom: 40px;
+    /* font-size: 14px; */
   }
 
   .onework {
@@ -733,11 +740,11 @@
   .midasi {
     background-color: white;
     font-size: 20px;
-    width: 80vw;
+    width: 90vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 10vw 30px;
+    margin: 0 5vw 30px;
     box-shadow: 0 0 8px grey;
   }
 
@@ -751,19 +758,20 @@
     margin-right: 10px;
   }
   .link {
-    width: 80%;
-    margin: 0 10vw;
+    width: 90%;
+    margin: 0 5vw;
     margin-bottom: 10px;
   }
   .worksimg {
-    width: 80vw;
-    margin: 0 10vw;
+    width: 90vw;
+    margin: 0 5vw;
     box-shadow: 0 0 8px grey;
   }
 
   .setumei {
-    width: 80%;
-    margin: 0 10vw;
+    width: 90%;
+    margin: 0 5vw;
+    /* font-size: 14px; */
   }
 
   .seikakuimg {
