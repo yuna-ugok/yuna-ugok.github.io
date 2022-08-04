@@ -879,7 +879,7 @@
 
   .profiledetail {
     clear: both;
-    width: 90%;
+    width: 85%;
     padding-top: 50px;
     margin: 0 auto;
   }
@@ -1034,7 +1034,7 @@
 
   .onework:hover {
     color: rgb(245, 245, 245);
-    background-color: rgba(197, 196, 196, 0.7);
+    background-color: #c5c4c4b3;
   }
 
   /* 画像が大きくなる　問題点：メニューをと重なった時に画像が上に来る */
