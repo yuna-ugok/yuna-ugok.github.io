@@ -563,8 +563,8 @@
 
   .yunaimg {
     padding-top: 50px;
-    width: 79%;
-    margin: 0 10%;
+    width: 85%;
+    margin: 0 7.5%;
   }
 
   .profilemidasi {
@@ -597,7 +597,7 @@
   }
 
   .profiledetail {
-    width: 90%;
+    width: 85%;
     margin: 0 auto;
   }
 
@@ -654,8 +654,8 @@
     font-size: 20px;
     text-align: center;
     border-bottom: solid 1px dimgray;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 7.5%;
+    margin-right: 7.5%;
     margin-bottom: 50px;
     margin-top: 150px;
     font-family: "Times New Roman", Times, serif;
@@ -720,14 +720,14 @@
   }
 
   .researchsetumei {
-    width: 90%;
+    width: 85%;
     margin: 0 auto;
     margin-bottom: 70px;
     /* font-size: 14px; */
   }
 
   .researchsetumei-seikaku {
-    width: 90%;
+    width: 85%;
     margin: 0 auto;
     margin-bottom: 40px;
     /* font-size: 14px; */
@@ -740,11 +740,11 @@
   .midasi {
     background-color: white;
     font-size: 20px;
-    width: 90vw;
+    width: 85vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 5vw 30px;
+    margin: 0 7.5vw 30px;
     box-shadow: 0 0 8px grey;
   }
 
@@ -758,19 +758,19 @@
     margin-right: 10px;
   }
   .link {
-    width: 90%;
-    margin: 0 5vw;
+    width: 85%;
+    margin: 0 7.5vw;
     margin-bottom: 10px;
   }
   .worksimg {
-    width: 90vw;
-    margin: 0 5vw;
+    width: 85vw;
+    margin: 0 7.5vw;
     box-shadow: 0 0 8px grey;
   }
 
   .setumei {
-    width: 90%;
-    margin: 0 5vw;
+    width: 85%;
+    margin: 0 7.5vw;
     /* font-size: 14px; */
   }
 
